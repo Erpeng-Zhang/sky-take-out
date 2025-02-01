@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1f8edea-e330-4d57-87bc-fb03f3ff5cfa" name="Changes" comment="新增员工功能改进，用户名重复提醒+操作人ID获取">
+    <list default="true" id="e1f8edea-e330-4d57-87bc-fb03f3ff5cfa" name="Changes" comment="员工分页查询功能实现">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/config/WebMvcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/controller/admin/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sky-server/src/main/java/com/sky/service/EmployeeService.java" afterDir="false" />
@@ -113,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738378413708</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="员工分页查询功能实现">
+      <option name="closed" value="true" />
+      <created>1738389545393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738389545393</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新增员工初步实现" />
     <MESSAGE value="新增员工功能改进，用户名重复提醒+操作人ID获取" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增员工功能改进，用户名重复提醒+操作人ID获取" />
+    <MESSAGE value="员工分页查询功能实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="员工分页查询功能实现" />
   </component>
 </project>
