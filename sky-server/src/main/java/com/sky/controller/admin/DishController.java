@@ -99,10 +99,11 @@ public class DishController {
 
     /**
      * 设置菜品起售/停售
+     * 起售停售在
      * @param status
      * @return
      */
-    @PutMapping("/status/{status}")
+    @PostMapping("/status/{status}")
     @ApiOperation("设置菜品起售/停售")
     public Result updateStatus(@PathVariable Integer status, Long id){
         log.info("设置菜品起售/停售:{}", status);
