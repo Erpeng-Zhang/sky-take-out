@@ -3,6 +3,7 @@ package com.sky.service.impl;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sky.constant.MessageConstant;
+import com.sky.constant.StatusConstant;
 import com.sky.context.BaseContext;
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
@@ -43,9 +44,9 @@ public class CategoryServiceImpl implements CategoryService {
         // 对象属性copy
         BeanUtils.copyProperties(categoryDTO, category);
 
-        // 记录修改时间与修改人
-        category.setUpdateTime(LocalDateTime.now());
-        category.setUpdateUser(BaseContext.getCurrentId());
+//        // 记录修改时间与修改人
+//        category.setUpdateTime(LocalDateTime.now());
+//        category.setUpdateUser(BaseContext.getCurrentId());
 
         categoryMapper.update(category);
     }
@@ -64,14 +65,14 @@ public class CategoryServiceImpl implements CategoryService {
         BeanUtils.copyProperties(categoryDTO, category);
 
         // status默认关闭
-        category.setStatus(0);
+        category.setStatus(StatusConstant.DISABLE);
 
-        // 记录创建时间与创建人
-        category.setCreateTime(LocalDateTime.now());
-        category.setCreateUser(BaseContext.getCurrentId());
-        // 记录修改时间与修改人
-        category.setUpdateTime(LocalDateTime.now());
-        category.setUpdateUser(BaseContext.getCurrentId());
+//        // 记录创建时间与创建人
+//        category.setCreateTime(LocalDateTime.now());
+//        category.setCreateUser(BaseContext.getCurrentId());
+//        // 记录修改时间与修改人
+//        category.setUpdateTime(LocalDateTime.now());
+//        category.setUpdateUser(BaseContext.getCurrentId());
 
         categoryMapper.insert(category);
     }
