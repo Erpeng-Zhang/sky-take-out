@@ -141,8 +141,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         // update employee set status = ? where id = ?
         Employee employee = Employee.builder()
                         .status(status)
-                                .id(id)
-                                        .build();
+                        .id(id)
+                        .build();
 
         employeeMapper.update(employee);
     }
