@@ -48,4 +48,11 @@ public interface CategoryService {
      * @param id
      */
     void deleteById(Long id);
+
+    /**
+     *
+     * @param type
+     * @return
+     */
+    List<Category> list(Integer type);
 }
