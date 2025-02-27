@@ -29,7 +29,6 @@ public class DishController {
 
     @Autowired
     private DishService dishService;
-
     @Autowired
     private RedisTemplate redisTemplate;
 
@@ -44,7 +43,7 @@ public class DishController {
         log.info("新增菜品：{}", dishDTO);
         dishService.saveWithFlavor(dishDTO);
 
-//        清理缓存数据
+        // 清理缓存数据
         String key = "dish_" + dishDTO.getCategoryId();
         clearCache(key);
 
@@ -76,7 +75,7 @@ public class DishController {
         log.info("菜品批量删除：{}", ids);
         dishService.deleteBatch(ids);
 
-//        将所有的菜品缓存数据清理掉，所有以dish_开头的key
+        //将所有的菜品缓存数据清理掉，所有以dish_开头的key
         clearCache("dish_*");
         return Result.success();
     }
