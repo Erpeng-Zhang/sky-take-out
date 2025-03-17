@@ -64,4 +64,42 @@
         </where>
         order by order_time desc
     </select>
+
+    <select id="getOrderCountByMap" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM orders
+        <where>
+            <if test="begin != null"> AND order_time >= #{begin}</if>
+            <if test="end != null"> AND order_time &lt; DATE_ADD(#{end}, INTERVAL 1 DAY) </if>
+            <if test="status != null"> AND status = #{status}</if>
+        </where>
+    </select>
+
+    <select id="sumByMap" resultType="java.lang.Double">
+        select sum(amount) from orders
+        <where>
+            <if test="begin != null">
+                and order_time >= #{begin}
+            </if>
+            <if test="end != null">
+                and order_time &lt; DATE_ADD(#{end}, INTERVAL 1 DAY)
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+    <select id="countByMap" resultType="java.lang.Integer">
+        select count(id) from orders
+        <where>
+            <if test="begin != null">
+                and order_time >= #{begin}
+            </if>
+            <if test="end != null">
+                and order_time &lt; DATE_ADD(#{end}, INTERVAL 1 DAY)
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
 </mapper>
